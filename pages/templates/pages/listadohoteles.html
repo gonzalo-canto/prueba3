@@ -1,0 +1,113 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="site-blocks-cover overlay" style="background-image: url(/static/pages/images/Banner_apartamentos.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <span class="caption mb-3">ADMIN PANEL</span>
+              <h1 class="mb-4">Listado de AUTOS</h1>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+    
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Kilometraje</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+                <th scope="col">Tipo Traccion</th>
+                <th scope="col">Combustible</th>
+                <th scope="col">Accidente</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Año</th>
+                <th scope="col">Tipo Motor</th>
+                <th scope="col">Clindrada</th>
+                <th scope="col">Air Bags</th>
+                <th scope="col">Dueños</th>
+              </tr>
+            </thead>
+            <tbody>
+
+                {% for h in hotel %}
+
+              <tr>
+                <th scope="row">{{ h.id }}</th>
+                <td>{{ h.nombre }}</td>
+                <td>{{ h.cantidad_Habitaciones }}</td>
+                <td>{{ h.precio_Dia }}</td>
+                <td>{{ h.foto }}</td>
+                <td>{{ h.tipo }}</td>
+                <td>{{ h.pais.nombre }}</td>
+                <td>{{ h.disponibilidad_Inmediata }}</td>
+                <td>{{ h.categoria }}</td>
+                <td>{{ h.ano }}</td>
+                <td>{{ h.motor }}</td>
+                <td>{{ h.cilindrada }}</td>
+                <td>{{ h.air_bags }}</td>
+                <td>{{ h.duenos }}</td>
+
+              
+              </tr>
+
+              {% endfor %}
+
+            </tbody>
+          </table>
+
+          {% if messages %}
+
+          {% for m in messages %}
+      
+          <b> {{ m }} </b>
+          
+          {% endfor %}
+      
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="py-4 quick-contact-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div>
+              <span class="icon-room text-white h2 d-block"></span>
+              <h2>Sede Central</h2>
+              <p class="mb-0">New York - 2398 <br>  10 Hadson Carl Street</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div>
+              <span class="icon-clock-o text-white h2 d-block"></span>
+              <h2>Horario de servicio</h2>
+              <p class="mb-0">Lunes a Viernes 6:30AM - 7:30PM <br>
+              Sabado - 1:00PM - 7:30PM <br>
+              Domingos 1:00PM - 5:00PM</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div>
+              <span class="icon-comments text-white h2 d-block"></span>
+              <h2>Estemos en contacto</h2>
+              <p class="mb-0">Email: information@iberostar.com <br>
+              Llámanos gratis al 800-914-478 <br>
+              Lunes a Viernes (06:00 a 16:00) (GMT-04:00)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

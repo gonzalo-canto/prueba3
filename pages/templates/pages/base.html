@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>INTAKE &mdash; COMPRA Y VENTA VEHICULOS</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'pages/fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'pages/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/animate.css' %}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="{% static 'pages/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/favicon.ico' %}" />
+  </head>
+
+<body onload="fechaHoraActual()"> 
+ <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+    
+    <div class="site-navbar-wrap js-site-navbar bg-white">
+      <div class="container">
+        <div class="site-navbar bg-light">
+          <div class="py-1">
+            <div class="row align-items-center">
+              <div class="col-2">
+                  <img class="logo" src="{% static 'pages/images/logo/intake.png' %}">
+              </div>
+              <div class="col-10">
+                <nav class="site-navigation text-right" role="navigation">
+                  <div class="container">
+                    
+                    <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                      <li>
+                        <a href="/">Inicio</a>
+                      </li>
+                      <!--<li><a href="{% url 'noticias' %}">Noticias</a></li>-->
+                      <li class="has-children desactive">
+                        <a href="">Vehiculos</a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="{% url 'apartamentos' %}">Comprar</a></li>
+                          <li><a href="{% url 'registrohoteles' %}">Vender</a></li>
+                          <li><a href="{% url 'listadohotel' %}">Listado Autos</a></li>
+                        </ul>
+                      </li>
+                      <li class="has-children desactive">
+
+                          <a href="">Clientes</a>
+                          <ul class="dropdown arrow-top">
+                            <li><a href="{% url 'registroclientes' %}">Registrar cliente</a></li>
+                            <li><a href="{% url 'listadoclientes' %}">Listado clientes</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="{% url 'galeria' %}">Fotos del mes</a></li>
+
+                      <li><a href="{% url 'sobrenosotros' %}">Quienes Somos</a></li>
+
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <footer class="site-footer">
+            <div class="container">
+                  </div>
+                </div>
+        
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12">
+                  <p>
+                  Copyright &copy; <script>document.write(new Date().getFullYear());</script> 
+                  InTake Derechos Reservados 2019</p>
+                </div>
+                
+              </div>
+            </div>
+          </footer>
+        </div>
+        
+        <script src="{% static 'pages/js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'pages/js/jquery-migrate-3.0.1.min.js' %}"></script>
+        <script src="{% static 'pages/js/jquery-ui.js' %}"></script>
+        <script src="{% static 'pages/js/popper.min.js' %}"></script>
+        <script src="{% static 'pages/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'pages/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'pages/js/jquery.stellar.min.js' %}"></script>
+        <script src="{% static 'pages/js/jquery.countdown.min.js' %}"></script>
+        <script src="{% static 'pages/js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'pages/js/bootstrap-datepicker.min.js' %}"></script>
+        <script src="{% static 'pages/js/aos.js' %}"></script>
+        <script src="{% static 'pages/js/mediaelement-and-player.min.js' %}"></script>
+        <script src="{% static 'pages/js/main.js' %}"></script>
+        <script src="{% static 'pages/js/jquery.rut.js' %}"></script>
+          
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                      var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+        
+                      for (var i = 0; i < total; i++) {
+                          new MediaElementPlayer(mediaElements[i], {
+                              pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                              shimScriptAccess: 'always',
+                              success: function () {
+                                  var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                                  for (var j = 0; j < targetTotal; j++) {
+                                      target[j].style.visibility = 'visible';
+                                  }
+                        }
+                      });
+                      }
+                  });
+        </script>
+</body>
+</html>

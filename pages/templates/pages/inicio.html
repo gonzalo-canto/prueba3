@@ -1,0 +1,161 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+{% load static %}
+     <div class="slide-one-item home-slider owl-carousel">
+      <div class="site-blocks-cover overlay" style="background-image: url(static/pages/images/slider/4.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-10 text-center" data-aos="fade">
+              <h1 class="mb-2">InTake</h1><h1 class="mb-2">Compra y Venta de vehiculos</h1>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div class="site-blocks-cover overlay" style="background-image: url(static/pages/images/slider/5.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <h1 class="mb-2">¿Necesitas comprar un auto?</h1>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="site-blocks-cover overlay" style="background-image: url(static/pages/images/slider/6.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <h1 class="mb-2">¿Necesitas vender tu auto?</h1>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+
+
+    <!-- <center><img class="advertise" src="{% static 'pages/images/Hotel1.png' %}" height="196" width="768"></center>-->
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mx-auto text-center mb-5 section-heading">
+            <h2 class="mb-5">Variedades de autos esperandote, solo tu debes decidir cual es el mejor para ti</h2>
+
+              <h3 class="my-4">
+                  <center>
+                      <img src="static/pages/images/logo/intake.png"  border=0>
+                  </center>
+              </h3>
+
+              <div id="container">
+
+                <div class="card-deck mb-3 text-center">
+                  <div class="card mb-4 shadow-sm">
+                      <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Compra de Vehiculos</h4>
+                      </div>
+                      <div class="card-body">
+                          <img src="{% static 'pages/images/slider/compra.jpg' %}" height="200" width="253"> 
+                        <h1 class="card-title pricing-card-title">Informacion</h1>
+                          <li class="c-item"><i aria-hidden="true"></i>Con InTake podras encontrar el vehiculo que siempre quisiste con la mejor calidad y precio, solo tienes que darle clic al boton para poder ver la variedad de automoviles que tienes a tu disposicion.</li>
+                        <h2></h2>
+                          <p>Ahora mismo se encontrarón <span id="numero-aleatorio1">0</span> Vehiculos en venta</p>
+            
+                          <a href="{% url 'apartamentos' %}" class="btn btn-lg btn-block btn-primary">Ver vehiculos</a>
+                      </div>
+                    </div>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Venta de Vehiculos</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="{% static 'pages/images/slider/venta.jpg' %}" height="200" width="253"> 
+                      <h1 class="card-title pricing-card-title">Informacion</h1>
+                        <li class="c-item"><i aria-hidden="true"></i>Si tienes tu auto en excelentes condiciones envie su solicitud a traves de un formulario para ser inspeccionado por nuestro equipo de especialistas, despues su vehiculos sera subido a Intake para su venta.</li>
+                        <h2></h2>
+                        <p>Ahora mismo se encontrarón <span id="numero-aleatorio2">0</span> Vehiculos en venta</p>
+                     <a href="#" class="btn btn-lg btn-block btn-primary">Ver vehiculos</a>
+                    </div>
+                  </div>
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Repuestos de Vehiculos</h4>
+                  </div>
+                  <div class="card-body">
+                      <img src="{% static 'pages/images/slider/repuestos.jpg' %}" height="200" width="253"> 
+                    <h1 class="card-title pricing-card-title">Informacion</h1>
+                      <li class="c-item"><i aria-hidden="true"></i>¿Estas buscando repuestos para tu auto? Con InTake podras conseguir los mejores repuestos importados para dar el máximo rendimiento a tu vehiculo y todo esto al mejor precio para tu bolsillo</li>
+                      <h2></h2>
+                      <p>Ahora mismo se encontrarón <span id="numero-aleatorio3">0</span> Repuestos disponibles</p>
+                      <a href="#" class="btn btn-lg btn-block btn-primary">Ver repuestos</a>
+                  </div>
+                </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Contactate con nosotros</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'pages/images/slider/contactanos.png' %}" height="200" width="253"> 
+                  <h1 class="card-title pricing-card-title">informacion</h1>
+                    <li class="c-item"><i aria-hidden="true"></i>Si tienes alguna pregunta sobre algun vehiculo, tambien si tienes alguna sugerencia o reclamo no tendremos problema en hablar contigo, puedes contactarte con nosotros acá</li>
+                    <h2></h2>
+                    <p>                                                                                       </p>
+                    <a href="#" class="btn btn-lg btn-block btn-primary">Contactanos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="py-5 upcoming-events" style="background-image: url('static/pages/images/slider/2.jpg'); background-attachment: fixed;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <span class="caption2">Oferta de verano 10% dscto en tu primera compra</span>
+            <a href="apartamentos" class="text-white btn btn-outline-warning rounded-0 text-uppercase">Ver vehiculos</a>
+          </div>
+          <div class="col-md-6">
+            <span class="caption">Aprovecha ahora! Esta promo termina en</span>
+            <div id="date-countdown"></div>    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-4 quick-contact-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div>
+              <span class="icon-room text-white h2 d-block"></span>
+              <h2>Sede Central</h2>
+              <p class="mb-0">Esquina Blanca 501<br>Maipú Santiago De Chile, Region Metropolitana, Chile </p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div>
+              <span class="icon-clock-o text-white h2 d-block"></span>
+              <h2>Horario de servicio</h2>
+              <p class="mb-0">Lunes a Viernes 9:00AM - 19:00PM <br>
+              Sabado - 9:00AM - 14:00PM <br>
+              Domingos Cerrado</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div>
+              <span class="icon-comments text-white h2 d-block"></span>
+              <h2>Contactanos</h2>
+              <p class="mb-0">Email: consultas@intake.com <br>
+              Llámanos al +56978894521 <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

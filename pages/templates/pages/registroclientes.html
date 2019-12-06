@@ -1,0 +1,59 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="site-blocks-cover overlay" style="background-image: url(/static/pages/images/Banner_Contacto.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <span class="caption mb-3">¡Unete a nuestro club!</span>
+              <h1 class="mb-4">Registro de clientes</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div class="site-section site-section-sm">
+      <div class="container">
+        <div class="row">
+
+			<div class="col-md-12 col-lg-8 mb-5">
+			<h3 class="h5 text-black mb-3">Con tu cuenta IBEROSTAR podrás acceder a un mundo de ofertas y oportunidades. Registrate hoy!</h3>
+
+        <form class="p-0 bg-white" id="datos" name="datos" action="" onsubmit="return validarFormulario()" method="POST">
+          {% csrf_token %}
+
+        <label class="font-weight-bold" for="nom">Nombre y Apellido</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre y apellido" maxlength="50"><br>
+
+        <label class="font-weight-bold" for="ru">Rut</label>
+        <input type="text" id="rut" name="rut" class="form-control" placeholder="Ingresa tu Rut" maxlength="9"><br>
+
+        <label class="font-weight-bold" for="corre">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" class="form-control" placeholder="Ingresa tu correo electrónico"><br>
+
+        <label class="font-weight-bold" for="tele">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Ingresa tu número de teléfono" maxlength="10"><br>
+			
+        <!--<label class="font-weight-bold" for="selector1">País:</label>
+        <select class="form-control" name="selector1" id="selector1" >
+            <option value="">Selecciona tu país</option>
+
+            {% for p in paises %}
+            <option value="{{ p.id }}">{{ p.nombre }}</option>
+            {% endfor %}
+
+        </select><br>-->
+
+        <input type="submit" value="Registrar cliente" class="btn btn-primary pill px-4 py-2">
+        </form><br>
+
+        <b>{{ resultado }}</b>
+
+      </div>
+
+         
+
+        </div>
+      </div>
+    </div>
+{% endblock %}
